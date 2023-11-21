@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-let providers_name = "adyen.com";
+
 export const fetchProviderName = createAsyncThunk(
   "fetchProviderName",
-  async () => {
-    const res = await fetch(`https://api.apis.guru/v2/${providers_name}.json`);
+  async (value) => {
+    const res = await fetch(`https://api.apis.guru/v2/${value}.json`);
     return res.json();
   }
 );

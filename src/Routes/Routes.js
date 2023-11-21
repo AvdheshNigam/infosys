@@ -13,7 +13,7 @@ const Layout = () => {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/home" element={<Home />} />
-          <Route exact path="/product" element={<Product />} />
+          <Route exact path="/product/:providerName" element={<Product />} />
         </Routes>
       </BrowserRouter>
       <Footer />
