@@ -1,1 +1,66 @@
 // Page Layout Style CSS
+.layout {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  // border: 2px solid red;
+  background: #42607b;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+  &__main {
+    display: flex;
+    background: transparent;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    &__section {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      &__aside {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        top: 0;
+        transition: all 0.5s ease-in-out;
+        min-height: 100%;
+        overflow-y: auto;
+        &.show {
+          right: 0%;
+        }
+        &__menu {
+          background: #42607b;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 40%;
+          bottom: 0;
+          @media (max-width: 671px) {
+            width: 90%;
+          }
+          > h2 {
+            font-size: 17px;
+            color: #fff;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+button {
+  background: #00a1d4;
+  padding: 10px 15px;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  margin: 15px auto;
+  width: 200px;
+}
