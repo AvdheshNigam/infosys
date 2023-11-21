@@ -10,7 +10,6 @@ const Accordion = ({ data }) => {
   console.log("PN", state.providerName.data);
   const [selected, setSelected] = useState(null);
   const [currentItem, setCurrentItem] = useState("1forge.com");
-  const [firstKey, setFirstKey] = useState("");
 
   const toggle = (e, item, index) => {
     e.stopPropagation();

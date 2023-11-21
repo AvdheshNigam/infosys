@@ -31,7 +31,7 @@ const Home = ({ myName }) => {
     <>
       <main className="layout__main">
         <section className="layout__main__section">
-          <button onClick={rightSideBarHandler}>Open ::{myName}</button>
+          <button onClick={rightSideBarHandler}>Explore Web APIs</button>
           <aside
             onClick={rightSideBarHandler}
             className={`layout__main__section__aside ${isOpen ? "show" : ""}`}
