@@ -21,15 +21,7 @@ const Accordion = ({ data }) => {
     setSelected(index);
     dispatch(fetchProviderName(item));
     setCurrentItem(item);
-    // title();
   };
-  // const title = () => {
-  //   return Object.keys(data.providerName?.data?.apis).forEach((ele) => {
-  //     console.log("dd", data.providerName?.data?.apis[ele].info.title);
-  //   });
-  // };
-  // console.log("pppp+++++", state.providerName.data["apis"][firstKey]);
-  // console.log("firstKey+++++", firstKey);
 
   useEffect(() => {
     if (!currentItem === null) {
@@ -60,9 +52,7 @@ const Accordion = ({ data }) => {
                   : "accordion__item__content"
               }
             >
-              {/* <Link to={"/product/" + value}>click</Link> */}
-              <Link to={"/product/providerName"}>
-                {/* aaa::{JSON.stringify(data.providerName?.data?.apis)} */}
+              <Link to={"/product/" + currentItem}>
                 {data.providerName?.data?.apis &&
                   Object.keys(data.providerName?.data?.apis).map((ele) => (
                     <span>
