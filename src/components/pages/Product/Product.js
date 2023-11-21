@@ -9,7 +9,7 @@ function Product() {
   const currentItem = Object.keys(state.providerName.data["apis"]);
   const goToback = (e) => {
     window.history.back();
-    rightSideBarHandler(e);
+    // rightSideBarHandler(e);
   };
 
   useEffect(() => {
