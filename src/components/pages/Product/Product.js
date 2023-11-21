@@ -7,6 +7,7 @@ function Product({ rightSideBarHandler }) {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const currentItem = Object.keys(state.providerName.data["apis"]);
+
   const goToback = (e) => {
     window.history.back();
     rightSideBarHandler(e);

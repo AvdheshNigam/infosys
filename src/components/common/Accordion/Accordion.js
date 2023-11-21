@@ -46,15 +46,15 @@ const Accordion = ({ data }) => {
               key={index}
             >
               <Link to={"/product/" + currentItem}>
-                {data.providerName?.data?.apis &&
-                  Object.keys(data.providerName?.data?.apis).map((ele) => (
+                {data?.providerName?.data?.apis &&
+                  Object.keys(data?.providerName?.data?.apis).map((ele) => (
                     <span key={index}>
                       <img
                         src={
-                          data.providerName?.data?.apis[ele].info["x-logo"].url
+                          data?.providerName?.data?.apis[ele].info["x-logo"].url
                         }
                       />
-                      {data.providerName?.data?.apis[ele].info.title}
+                      {data?.providerName?.data?.apis[ele].info.title}
                     </span>
                   ))}
               </Link>
