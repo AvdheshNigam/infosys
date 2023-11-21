@@ -13,7 +13,7 @@ const providersSlice = createSlice({
     isError: false,
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchProviders.pending, (state, action) => {
+    builder.addCase(fetchProviders.pending, (state) => {
       state.isLoading = true;
     });
     builder.addCase(fetchProviders.fulfilled, (state, action) => {
