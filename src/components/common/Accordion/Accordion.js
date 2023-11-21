@@ -22,11 +22,6 @@ const Accordion = ({ data }) => {
     setCurrentItem(item);
   };
 
-  useEffect(() => {
-    if (!currentItem === null) {
-      setCurrentItem("1forge.com");
-    }
-  }, []);
   return (
     <div className="accordion">
       {data?.providers?.data?.data &&
