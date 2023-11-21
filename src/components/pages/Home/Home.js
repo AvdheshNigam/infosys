@@ -3,14 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import Accordion from "../../common/Accordion/Accordion";
 import { fetchProviders } from "../../../redux/slice/Providers/providersSlice";
 
-const Home = () => {
+const Home = ({ isOpen, rightSideBarHandler }) => {
+  console.log("props", isOpen);
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const rightSideBarHandler = (e) => {
-    setIsOpen(!isOpen);
-  };
+  // const rightSideBarHandler = (e) => {
+  //   setIsOpen(!isOpen);
+  // };
 
   const handleProviders = () => {
     dispatch(fetchProviders());
