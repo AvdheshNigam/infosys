@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Accordion from "../../common/Accordion/Accordion";
 import { fetchProviders } from "../../../redux/slice/Providers/providersSlice";
 
-const Home = ({ myName }) => {
+const Home = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,6 @@ const Home = ({ myName }) => {
   if (state.providerName.pending) {
     return <h1>Loading...</h1>;
   }
-  // console.log("state", state?.providers?.data?.data);
   return (
     <>
       <main className="layout__main">

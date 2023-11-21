@@ -13,7 +13,7 @@ const Accordion = ({ data }) => {
 
   const toggle = (e, item, index) => {
     e.stopPropagation();
-
+    window.localStorage.setItem("item", item);
     if (selected === index) {
       return setSelected(null);
     }
