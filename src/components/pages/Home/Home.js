@@ -21,10 +21,10 @@ const Home = () => {
   }, []);
 
   if (state.providers.isLoading) {
-    return <h1>Loading...</h1>;
+    return <h1 className="laoding">Loading...</h1>;
   }
   if (state.providerName.pending) {
-    return <h1>Loading...</h1>;
+    return <h1 className="laoding">Loading...</h1>;
   }
   return (
     <>

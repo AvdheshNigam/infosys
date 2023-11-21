@@ -6,6 +6,7 @@ import "./Product.scss";
 function Product() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
+
   const currentItem = Object.keys(state.providerName.data["apis"]);
   const goToback = (e) => {
     window.history.back();

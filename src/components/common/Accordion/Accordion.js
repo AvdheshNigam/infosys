@@ -36,7 +36,7 @@ const Accordion = ({ data }) => {
               }
             >
               <div>{item}</div>
-              <div>{selected === index ? "v" : ">"}</div>
+              <div> {selected === index ? "v" : ">"}</div>
             </div>
 
             <div

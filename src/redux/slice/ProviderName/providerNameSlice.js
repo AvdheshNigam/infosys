@@ -2,8 +2,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchProviderName = createAsyncThunk(
   "fetchProviderName",
-  async (value) => {
-    const res = await fetch(`https://api.apis.guru/v2/${value}.json`);
+  async (pvoviderName) => {
+    const res = await fetch(`https://api.apis.guru/v2/${pvoviderName}.json`);
     return res.json();
   }
 );
