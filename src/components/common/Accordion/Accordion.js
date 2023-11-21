@@ -65,7 +65,14 @@ const Accordion = ({ data }) => {
                 {/* aaa::{JSON.stringify(data.providerName?.data?.apis)} */}
                 {data.providerName?.data?.apis &&
                   Object.keys(data.providerName?.data?.apis).map((ele) => (
-                    <p>{data.providerName?.data?.apis[ele].info.title}</p>
+                    <span>
+                      <img
+                        src={
+                          data.providerName?.data?.apis[ele].info["x-logo"].url
+                        }
+                      />
+                      {data.providerName?.data?.apis[ele].info.title}
+                    </span>
                   ))}
               </Link>
             </div>
