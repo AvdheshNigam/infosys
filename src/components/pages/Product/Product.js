@@ -6,7 +6,6 @@ import "./Product.scss";
 function Product({ rightSideBarHandler }) {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
-  console.log("aa gya", state.providerName.data);
   const currentItem = Object.keys(state.providerName.data["apis"]);
   const goToback = (e) => {
     window.history.back();
