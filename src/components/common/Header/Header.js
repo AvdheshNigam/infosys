@@ -1,5 +1,5 @@
-const Header = ({ test }) => {
-  return test;
+const Header = () => {
+  return null;
 };
 
 export default Header;
