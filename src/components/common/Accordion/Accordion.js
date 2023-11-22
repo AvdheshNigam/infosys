@@ -7,7 +7,7 @@ import { fetchProviderName } from "../../../redux/slice/ProviderName/providerNam
 const Accordion = ({ data }) => {
   const dispatch = useDispatch();
   const [selected, setSelected] = useState(null);
-  const [currentItem, setCurrentItem] = useState("1forge.com");
+  const [currentItem, setCurrentItem] = useState("");
 
   const toggle = (e, item, index) => {
     e.stopPropagation();
@@ -47,7 +47,7 @@ const Accordion = ({ data }) => {
             >
               <Link to={"/product/" + currentItem}>
                 {data?.providerName?.data?.apis &&
-                  Object.keys(data?.providerName?.data?.apis).map((ele) => (
+                  Object.keys(data?.providerName?.data?.apis).map((ele, i) => (
                     <span key={index}>
                       <img
                         src={
